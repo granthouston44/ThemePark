@@ -62,6 +62,15 @@ public class ThemeParkTest {
         assertNotNull(result);
     }
 
+    @Test
+    public void canAddAttractionToVisitorVisitedListAndIncrementsVisitCount(){
+        themePark.visit(visitor, rollerCoaster);
+        ArrayList<Attraction> visited = new ArrayList<>();
+        visited.add(rollerCoaster);
+        assertEquals(visited, visitor.getVisitedAttractions());
+        assertEquals(1, rollerCoaster.getVisitCount());
+    }
+
 
 
 }
