@@ -1,5 +1,7 @@
 package stalls;
 
+import behaviours.IReviewed;
+
 public enum ParkingSpot {
     A1,
     A2,
